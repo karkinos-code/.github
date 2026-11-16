@@ -1,0 +1,36 @@
+name: Bug report
+description: Something is broken or gives wrong results
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: The input deck and command you ran, or a minimal code example.
+      render: toml
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Error output
+      description: Paste any error messages or relevant log output.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: Karkinos version or commit
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system and `rustc --version`.
