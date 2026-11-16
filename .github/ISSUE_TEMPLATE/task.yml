@@ -1,0 +1,56 @@
+name: Task
+description: Planned work for the team (implementation, refactoring, tooling, docs)
+labels: ["task"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What does this accomplish, and why now?
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: Break the work into steps. Each can become its own issue if someone takes it on.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: done-when
+    attributes:
+      label: Done when
+      description: How will we know it's finished? e.g. "skeleton test passes in CI"
+    validations:
+      required: true
+  - type: dropdown
+    id: crate
+    attributes:
+      label: Crate
+      description: Select all that apply.
+      multiple: true
+      options:
+        - karkinos-core
+        - karkinos-sim
+        - karkinos-integrators
+        - karkinos-beam
+        - karkinos-optics
+        - karkinos-medium
+        - karkinos-radiation
+        - karkinos-io
+        - karkinos (facade)
+        - karkinos-cli
+        - karkinos-py
+        - CI / tooling
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Design decisions, references, links to related issues or PRs.
